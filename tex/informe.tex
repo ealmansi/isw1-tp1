@@ -204,8 +204,31 @@ Ronaldo va a su masajista todos los martes a las 15:00hs. Necesita un taxi para 
 
 \diagramah{contexto}
 
-A continuación detallaremos algunos fenómenos que creemos que vale la pena aclarar debido a su importancia dentro de la solución, y la brevedad que se les adjudicó en el diagrama.
+A continuación, vamos a explicar los distintos actores que están presentes en nuestro diagrama de contexto.
 
+  \begin{enumerate}
+    \item \textbf{Sistema:} El sistema a crear.
+    \item \textbf{Aplicación Móvil:} Aplicación móvil con la cual los usuarios pueden pedir taxis, calificar taxistas, etc. Esta apliación es externa a nuestro sistema.
+    \item \textbf{Aplicación Web:} Aplicación web con la cual los usuarios pueden pedir taxis, calificar taxistas, etc. Esta apliación es externa a nuestro sistema.
+    \item \textbf{Operador Telefónico/ de radio:} Empleado de la empresa encargado de atender teléfonos, y hablar con taxistas para coordinar viajes.
+    \item \textbf{Cliente No Registrado:} Cualquier persona que se comunique vía telefónica, sin importar si tiene un usuario registrado en el sistema o no.
+    \item \textbf{Cliente Registrado:} Cualquier persona que se haya registrado previamente en el sistema. Registrando un nombre de usuario y una contraseña.
+    \item \textbf{Directivos:} Empleados de la empresa encargados de dirigir la misma.
+    \item \textbf{Taxista:} Un empleado de la empresa que maneja taxis.
+    \item \textbf{GPS:} Sistema de navegación y localización mediante satélites.
+  \end{enumerate}
+
+A continuación, vamos a enumerar y explicar algunos fenómenos que creemos que vale la pena aclarar.
+
+   \begin{enumerate}
+     \item \textbf{Informar Modificación de Estado:} Por Informar Modificación de Estado nos referimos a que el taxista informa si surgió un contratiempo, como por ejemplo que pinchó una goma.
+     \item \textbf{Hacer Pedido:} Por Hacer Pedido nos referimos a que el cliente indica desde donde, a donde quiere ir y cuáles son sus preferencias (si las tiene).
+     \item \textbf{Brindar Opciones:} Por Brindar Opciones nos referimos a que las aplicaciones le indican al cliente cuáles son las mejores opciones de taxistas dado su pedido.
+     \item \textbf{Informar llegada y coordinar encuentro:} Por Informar llegada y coordinar encuentro nos referimos a que el taxista le avisa al cliente que llegó a la dirección coordenada para empezar el viaje.
+     \item \textbf{Calificar:} Por Calificar nos referimos a que el cliente califica a un cierto taxista, con una cierta cantidad de estrellas (1-5).
+  \end{enumerate}
+ 
+ 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -234,7 +257,7 @@ En esta sección vamos a hablar de los \emph{o-refinamientos} del diagrama de ob
   \begin{enumerate}
     \item Efectividad en el corto plazo (menos de 3 meses)
       
-      En este caso ambos objetivos aportan positivamente. Sin embargo nos parece que el primero es aún más efectivo a corto plazo que el segundo, ya que consideramos que una campaña publicitaria tiene un alcance mñas veloz que el de las redes sociales.
+      En este caso ambos objetivos aportan positivamente. Sin embargo nos parece que el primero es aún más efectivo a corto plazo que el segundo, ya que consideramos que una campaña publicitaria tiene un alcance más veloz que el de las redes sociales.
 
     \item Disminuir costo en el corto plazo (menos de 3 meses) %mediano plazo no hay diferencias asi que no hay objetivos blandos al respecto
       
@@ -255,7 +278,7 @@ En esta sección vamos a hablar de los \emph{o-refinamientos} del diagrama de ob
     \item Lograr programar viajes de rutina
   \end{enumerate}
   
-  En este caso pensamos los siguienes objetivos blandos relacionados:
+  En este caso pensamos los siguientes objetivos blandos relacionados:
   
   \begin{enumerate}
     \item Menos trabajo (en el sentido de menos cosas para hacer)
@@ -305,7 +328,7 @@ En esta sección vamos a hablar de los \emph{o-refinamientos} del diagrama de ob
   
   \item Comodidad para el taxista
   
-      En este caso creemos que el primer bjetivo aporta negativamente ya que para utilizar la aplicacion móvil el taxista deberá frenar su vehículo. En cambio la radio es un método más fácil de utilizar cuando se esta manejando.
+      En este caso creemos que el primer objetivo aporta negativamente ya que para utilizar la aplicación móvil el taxista deberá frenar su vehículo. En cambio la radio es un método más fácil de utilizar cuando se esta manejando.
   \end{enumerate}
 
 \item Lograr aumentar el tamaño de la flota
