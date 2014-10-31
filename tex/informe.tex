@@ -147,7 +147,7 @@ Facundo Decroix & 842/11 & fndecroix92@hotmail.com\\
 
 \section{Introducción}
 
-El CEO de TecnoTaxi nos contactó para solicitarnos crear un sistema. Nuestro objetivo es realizar un sistema para la automatización de las solcitudes de taxis de los pasajeros y la coordinación de los viajes con los taxistas. Antes de realizar el sistema en sí, vamos a proporcionar la mayor cantidad de información posible respecto de cómo nuestra propuesta va a ayudar a cumplir con los objetivos planteados. En particular, vamos a proporcionar un diagrama de contexto y un diagrama de objetivos.
+El CEO de TecnoTaxi nos contactó para solicitarnos crear un sistema. Nuestro objetivo es realizar un sistema para la automatización de las solicitudes de taxis de los pasajeros y la coordinación de los viajes con los taxistas. Antes de realizar el sistema en sí, vamos a proporcionar la mayor cantidad de información posible respecto de cómo nuestra propuesta va a ayudar a cumplir con los objetivos planteados. En particular, vamos a proporcionar un diagrama de contexto y un diagrama de objetivos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Escenarios hipotéticos                                                    %%
@@ -161,7 +161,7 @@ Los siguientes escenarios ilustran de manera informal situaciones representativa
 
 Alicia necesita viajar hasta el consultorio de su dentista y elige la moderna empresa TecnoTaxi para solicitar un taxi. Como ella está al día en cuestiones tecnológicas, tiene instalada la aplicación de la empresa en su smartphone y desea realizar la solicitud mediante la misma.
 
-Alicia inicia el proceso de solicitud en la aplicación, ingresando la dirección de origen del viaje, la direccion destino y sus preferencias: un auto moderno. El sistema le muestra mediante la aplicación una lista de opciones de diferentes taxistas que cumplen su pedido y ella elige a Florencia, que maneja un Chevrolet último modelo.
+Alicia inicia el proceso de solicitud en la aplicación, ingresando la dirección de origen del viaje, la dirección destino y sus preferencias: un auto moderno. El sistema le muestra mediante la aplicación una lista de opciones de diferentes taxistas que cumplen su pedido y ella elige a Florencia, que maneja un Chevrolet último modelo.
 
 \subsection{Escenario 2}
 
@@ -177,7 +177,7 @@ Cada vez que Lucas viaja con su taxista preferido, Roberto, llega a su destino c
 
 \subsection{Escenario 5}
 
-Alfredo desea ir a visitar a su tía, que vive en Boedo. Él es un pasajero usual de TecnoTaxi, por lo que tiene ya descargada en su smartphone la aplicacion móvil de viajes. Al abrir la aplicación, la misma le indica que no se puede encontrar una conexión a internet, por lo que deberá comunicarse por otros medios, sugiriendo la página web de la empresa y el número de teléfono para comunicarse por vía telefónica. Alfredo se dirige entonces a su computadora para solicitar el taxi vía web. Al abrir el navegador web, su página de inicio no carga correctamente. Sorprendido, Alfredo tipea la dirección de la página web indicada por la aplicación, pero su computadora tampoco logra cargarla: no tiene acceso a internet. Indignado por el pésimo servicio de internet que brindan tanto el servidor de internet que utiliza en su casa como el del celular, Alfredo decide hacer su pedido de viaje por teléfono. Llama a la línea telefónica de la empresa de taxis y es atendido por una cordial operadora, y realiza el pedido por 
+Alfredo desea ir a visitar a su tía, que vive en Boedo. Él es un pasajero usual de TecnoTaxi, por lo que tiene ya descargada en su smartphone la aplicación móvil de viajes. Al abrir la aplicación, la misma le indica que no se puede encontrar una conexión a internet, por lo que deberá comunicarse por otros medios, sugiriendo la página web de la empresa y el número de teléfono para comunicarse por vía telefónica. Alfredo se dirige entonces a su computadora para solicitar el taxi vía web. Al abrir el navegador web, su página de inicio no carga correctamente. Sorprendido, Alfredo tipea la dirección de la página web indicada por la aplicación, pero su computadora tampoco logra cargarla: no tiene acceso a internet. Indignado por el pésimo servicio de internet que brindan tanto el servidor de internet que utiliza en su casa como el del celular, Alfredo decide hacer su pedido de viaje por teléfono. Llama a la línea telefónica de la empresa de taxis y es atendido por una cordial operadora, y realiza el pedido por 
 este medio.
 
 \subsection{Escenario 6}
@@ -192,8 +192,22 @@ Ronaldo va a su masajista todos los martes a las 15:00hs. Necesita un taxi para 
 
 \section{Desarrollo}
 
+\subsection{Requerimientos}
 
-\newpage
+\begin{enumerate}
+ \item Brindar a los usuarios esperando un taxi la información de donde se encuentra el mismo y cual es el tiempo de demora.
+ \item Poder calificar los viajes, para que otros usuarios puedan elegir no viajar con determinado chofer.
+ \item Que el cliente pueda elegir el coche con el que viajar.
+ \item Que a los taxistas solo le ofrezca la operadora viajes dentro de su alcance.
+ \item Brindar al usuario una opción para cancelar el viaje.
+ \item Que los pasajeros puedan solicitar un viaje vía web o móvil.
+ \item Seguir aportando servicio a los pasajeros sin acceso a Internet o a la tecnología.
+ \item Que los pasajeros puedan planificar viajes de rutina.
+ \item Automatizar la asistencia al pasajero en la elección de auto/chofer.
+ \item Proveer un conjunto de estadísticas para los directivos.
+\end{enumerate}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Diagrama de Contexto                                                      %%
@@ -202,14 +216,18 @@ Ronaldo va a su masajista todos los martes a las 15:00hs. Necesita un taxi para 
 \appendix
 \section{Diagrama de contexto}
 
-\diagramah{contexto}
+  \begin{figure}[H]
+    \includegraphics[height=15cm,angle=90]{diagramas/contexto.png}
+  \end{figure}
+
+\subsection{Actores}
 
 A continuación, vamos a explicar los distintos actores que están presentes en nuestro diagrama de contexto.
 
   \begin{enumerate}
     \item \textbf{Sistema:} El sistema a crear.
-    \item \textbf{Aplicación Móvil:} Aplicación móvil con la cual los usuarios pueden pedir taxis, calificar taxistas, etc. Esta apliación es externa a nuestro sistema.
-    \item \textbf{Aplicación Web:} Aplicación web con la cual los usuarios pueden pedir taxis, calificar taxistas, etc. Esta apliación es externa a nuestro sistema.
+    \item \textbf{Aplicación Móvil:} Aplicación móvil con la cual los usuarios pueden pedir taxis, calificar taxistas, etc. Esta aplicación es externa a nuestro sistema.
+    \item \textbf{Aplicación Web:} Aplicación web con la cual los usuarios pueden pedir taxis, calificar taxistas, etc. Esta aplicación es externa a nuestro sistema.
     \item \textbf{Operador Telefónico/ de radio:} Empleado de la empresa encargado de atender teléfonos, y hablar con taxistas para coordinar viajes.
     \item \textbf{Cliente No Registrado:} Cualquier persona que se comunique vía telefónica, sin importar si tiene un usuario registrado en el sistema o no.
     \item \textbf{Cliente Registrado:} Cualquier persona que se haya registrado previamente en el sistema. Registrando un nombre de usuario y una contraseña.
@@ -217,6 +235,8 @@ A continuación, vamos a explicar los distintos actores que están presentes en 
     \item \textbf{Taxista:} Un empleado de la empresa que maneja taxis.
     \item \textbf{GPS:} Sistema de navegación y localización mediante satélites.
   \end{enumerate}
+
+\subsection{Fenómenos destacados}
 
 A continuación, vamos a enumerar y explicar algunos fenómenos que creemos que vale la pena aclarar.
 
@@ -228,6 +248,9 @@ A continuación, vamos a enumerar y explicar algunos fenómenos que creemos que 
      \item \textbf{Calificar:} Por Calificar nos referimos a que el cliente califica a un cierto taxista, con una cierta cantidad de estrellas (1-5).
   \end{enumerate}
  
+ \subsection{Aclaraciones}
+ 
+ Cabe resaltar que el optar por dejar la Aplicación M\'ovil y la Aplicación Web por fuera del sistema, deja de ser parte del producto que vamos a realizar y pasa a hacer algo que se supone que se consigue.
  
 \newpage
 
@@ -238,7 +261,22 @@ A continuación, vamos a enumerar y explicar algunos fenómenos que creemos que 
 
 \section{Modelo de objetivos}
 
+%TODO agregar el diagrama en si
+
 \newpage
+
+\subsection{Objetivos de alto nivel}
+
+%TODO terminar
+
+En esta sección vamos a explicar un poco los objetivos de alto nivel, y por qué están en esas posiciones en el diagrama.
+
+\begin{itemize}
+
+\item \textbf{Conocer estadísticas acerca del ambiente del trabajo, permite aumentar las ganancias}: Al conocer las estadísticas del ambiente del trabajo, puedo obtener un mejor conocimiento del medio. Esto permite podes aprovechar mejor el capital, incurriendo en mayores ingresos y/o menores ingresos.
+
+\end{itemize}
+
 
 \subsection{Objetivos blandos}
 
